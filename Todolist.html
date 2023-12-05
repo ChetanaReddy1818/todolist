@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Todostyle.css">
+    <script src="https://kit.fontawesome.com/84cc5b1552.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="main">
+  <h1>ToDoList</h1>
+  <input type="text"placeholder="Enter the Text" id="input-el">
+  <button id="sub-el" onclick="add()">Add </button>
+  <ul id="ul-el">
+  </ul>
+  <div id="text-el">  </div>
+  </div>
+  <script>
+    let inputEl=document.querySelector("#input-el")
+   
+    let textEl=document.querySelector("#text-el")
+    function add(){
+
+        if(inputEl.value==""){
+            alert("Enter the Task");
+        }
+        else{
+         let liEl=document.createElement("li");
+         
+         liEl.innerHTML=`${inputEl.value}  `;
+         textEl.appendChild(liEl);
+         inputEl.value="";
+         liEl.addEventListener('click',function(){
+              liEl.style.textDecoration='line-through'
+         })
+          }
+          
+        } 
+
+         
+           
+
+
+          
+            
+         
+        
+    
+   
+  
+
+  </script>
+    
+</body>
+</html>
